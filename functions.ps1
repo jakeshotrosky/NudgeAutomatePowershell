@@ -242,7 +242,7 @@ function Invoke-SlackMessage {
             blocks = @(
                 @{type = "header";text = @{type = "plain_text";text = "Nudge Run: ";emoji = $true}}
                 @{type = "section";text = @{type = "mrkdwn";text = "*Latest Versions:*
-macOS 13.7.3, macOS 14.7, macOS 15.0"}}
+macOS $($versionObject[1].minRequired), macOS $($versionObject[2].minRequired), macOS $($versionObject[3].minRequired)"}}
                 @{type = "section";text = @{type = "mrkdwn";text = "*Deadlines:*
 $((Get-Date).AddDays(14).ToString('yyyy-MM-dd'))
 $((Get-Date).AddDays(28).ToString('yyyy-MM-dd'))
